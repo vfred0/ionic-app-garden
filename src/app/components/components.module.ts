@@ -39,7 +39,7 @@ import { AppRoutingModule } from "../app-routing.module";
     CommonModule,
     IonicModule,
     FormsModule,
-    AppRoutingModule
+    PlantPageRoutingModule
   ]
 })
 

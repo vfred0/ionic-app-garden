@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Option } from 'src/app/interfaces/interfaces';
+import { Component, Input, OnInit } from '@angular/core';
+import { BackMenu, Option } from 'src/app/interfaces/interfaces';
 
 @Component({
   selector: 'app-select-plant',
@@ -7,17 +7,38 @@ import { Option } from 'src/app/interfaces/interfaces';
   styleUrls: ['./select-plant.page.scss'],
 })
 export class SelectPlantPage implements OnInit {
-  options: Option[] = [
-    {
-      name: "Pimiento",
-      link: "/plant/pimiento"
-    },
-    {
-      name: "Rabano",
-      link: "/plant/rabano"
-    }
-  ]
-  constructor() { }
+
+  private optionsBackMenu: BackMenu;
+  private optionsMenu: Option[];
+
+  constructor() {
+    this.optionsBackMenu = {
+      image: "/assets/images/select-plant.png",
+      link: "/home"
+    };
+
+    this.optionsMenu = [
+      {
+        name: "Pimiento",
+        link: "/plant/Pimiento",
+        parameters: true
+      },
+      {
+        name: "Rabano",
+        link: "/plant/Pimiento",
+        parameters: true
+      }
+    ];
+
+  }
+
+  getOptionsMenu(): Option[] {
+    return this.optionsMenu;
+  }
+
+  getOptionsBackMenu(): BackMenu {
+    return this.optionsBackMenu;
+  }
 
   ngOnInit() {
   }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Stage } from 'src/app/interfaces/interfaces';
+import { BackMenu, Stage } from 'src/app/interfaces/interfaces';
 
 @Component({
   selector: 'app-plant',
@@ -8,7 +8,19 @@ import { Stage } from 'src/app/interfaces/interfaces';
 })
 
 export class PlantPage implements OnInit {
-  constructor() { }
+  private optionsBackMenu: BackMenu;
+
+  constructor() {
+    this.optionsBackMenu = {
+      image: "/assets/images/pimiento.png",
+      link: "/select-plant"
+    };
+
+  }
+
+  getOptionsBackMenu(): BackMenu {
+    return this.optionsBackMenu;
+  }
 
   ngOnInit() {
   }

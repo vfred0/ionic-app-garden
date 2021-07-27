@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Option } from 'src/app/interfaces/interfaces';
+import { BackMenu, Option } from 'src/app/interfaces/interfaces';
 
 @Component({
   selector: 'app-home',
@@ -8,17 +8,27 @@ import { Option } from 'src/app/interfaces/interfaces';
 })
 export class HomePage implements OnInit {
 
-  options: Option[] = [
-    {
-      name: "Recomendaciones para el cultivo",
-      link: "/modal-plant"
-    },
-    {
-      name: "Calculadora de terreno",
-      link: "/land-calculator"
-    }
-  ]
-  constructor() { }
+  private optionsMenu: Option[];
+
+  constructor() {
+    this.optionsMenu = [
+      {
+        name: "Recomendaciones para el cultivo",
+        link: "/select-plant",
+        parameters: false
+
+      },
+      {
+        name: "Calculadora de terreno",
+        link: "/land-calculator",
+        parameters: false
+      }
+    ];
+  }
+
+  getOptionsMenu(): Option[] {
+    return this.optionsMenu;
+  }
 
   ngOnInit() {
   }

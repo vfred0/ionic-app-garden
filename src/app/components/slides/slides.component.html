@@ -2,7 +2,7 @@
   <ion-slides pager="true" [options]="slideOpts">
     <ion-slide *ngFor="let i of slidesImages">
       <ion-card mode="ios">
-        <img routerLink="/plant" [src]="i.img">
+        <img [src]="i.img">
       </ion-card>
     </ion-slide>
   </ion-slides>

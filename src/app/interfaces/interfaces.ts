@@ -3,12 +3,13 @@ export interface Stage {
   recomendations: string[];
 }
 
-
 export interface Option {
-  name: String,
-  link: String
+  name: String;
+  link: String;
+  parameters: boolean;
 }
 
 export interface BackMenu {
   image: String;
+  link: String;
 }

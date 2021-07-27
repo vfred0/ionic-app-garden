@@ -10,7 +10,8 @@ export class OptionComponent implements OnInit {
 
   @Input() option: Option;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() { }
 

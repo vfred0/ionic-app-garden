@@ -9,28 +9,9 @@ import { Option } from 'src/app/interfaces/interfaces';
 export class MenuOptionsComponent implements OnInit {
 
   @Input() options: Option[];
-  // options: Option[] = [
-  //   {
-  //     name: "Recomendaciones para el cultivo",
-  //     link: "/modal-plant"
-  //   },
-  //   {
-  //     name: "Calculadora de terreno",
-  //     link: "/modal-plant"
-  //   }
-  // ]
-  // options: {name:string, link:string}[] = [
-  //   {
-  //     name: "Recomendaciones para el cultivo",
-  //     link: "/modal-plant"
-  //   },
-  //   {
-  //     name: "Calculadora de terreno",
-  //     link: "/modal-plant"
-  //   }
-  // ]
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() { }
 

@@ -5,7 +5,7 @@
     gap        : .875em;
 
     &__title {
-      color: var(--color-black);
+      color: var(--color-neutral---black400);
     }
   }
 }
@@ -15,9 +15,10 @@
   width   : 100vw;
 
   &__container {
+    outline         : none;
     padding         : .43em 1.06em;
-    color           : var(--color-black);
-    background-color: var(--color-green);
+    color           : var(--color-neutral---black300);
+    background-color: var(--color-primary---green100);
     appearance      : none;
     border          : 0;
     border-radius   : .65em;

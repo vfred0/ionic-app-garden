@@ -13,6 +13,7 @@ ion-content,
 ion-toolbar,
 ion-header {
   --background: var(--color-neutral---white100);
+  font-family : var(--font);
 }
 
 .swiper-pagination-bullet {

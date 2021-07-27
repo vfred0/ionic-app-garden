@@ -13,13 +13,13 @@
 
 .c-button {
   position     : absolute;
-  background   : var(--color-white);
+  background   : var(--color-neutral---white400);
   left         : 21px;
   border-radius: 2.3em;
   top          : 55px;
 
   &__container {
-    background-color: var(--color-white);
+    background-color: var(--color-neutral---white400);
     padding         : .48em 0;
     padding-left    : .84em;
     padding-right   : 1.03em;
@@ -30,12 +30,12 @@
   }
 
   &__content {
-    color      : var(--color-green-dark);
+    color      : var(--color-primary---green500);
     font-weight: bold;
   }
 
   &__icon {
-    fill: var(--color-green-dark);
+    fill: var(--color-primary---green500);
   }
 
 

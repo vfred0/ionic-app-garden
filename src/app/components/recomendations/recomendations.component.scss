@@ -5,7 +5,7 @@
     flex-direction: column;
 
     &__title {
-      color: var(--color-black);
+      color: var(--color-black---black400);
     }
   }
 }
@@ -29,12 +29,12 @@
     }
 
     &-icon {
-      fill : var(--color-green);
+      fill : var(--color-neutral---black200);
       width: fit-content;
     }
 
     &-description {
-      color: var(--color-black);
+      color: var(--color-neutral---white900);
     }
 
   }

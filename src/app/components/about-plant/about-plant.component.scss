@@ -1,8 +1,10 @@
 .c-section {
   &-about-plant {
-    color: var(--color-black);
+    color: var(--color-neutral---black100);
 
-    // &__name {}
+    &__name {
+      color: var(--color-neutral---black500);
+    }
 
     // &__information {}
   }

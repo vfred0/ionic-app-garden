@@ -1,0 +1,26 @@
+.o-font {
+  &-title {
+    font-weight: 600;
+    font-size  : 1rem;
+  }
+
+  &-subtitle {
+    font-weight: 600;
+    font-size  : .94rem;
+  }
+
+  &-normal {
+    font-weight: 400;
+    font-size  : .89rem;
+  }
+
+  &-small {
+    font-weight: 400;
+    font-size  : .72;
+  }
+
+  &-smaller {
+    font-weight: 400;
+    font-size  : .56rem;
+  }
+}

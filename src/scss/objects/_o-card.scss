@@ -1,0 +1,22 @@
+.o-card {
+
+  &-smaller {
+    width        : 117px;
+    text-align   : center;
+    // height    : fit-content;
+  }
+
+  &-small {
+    // height: fit-content;
+    width: 150px;
+  }
+
+  &-large {
+    // height: fit-content;
+    width: 185px;
+  }
+
+  &-extra-large {
+    width: 100vmin;
+  }
+}

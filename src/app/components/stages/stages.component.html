@@ -1,0 +1,16 @@
+<section class="c-section-stages">
+  <span class="c-section-stages__title o-font-subtitle">Etapa</span>
+  <div class="c-select-box">
+    <select class="c-select-box__container o-font-normal" [(ngModel)]="dataRecomendations"
+      (ngModelChange)="updateDataRecomendations()">
+      <option *ngFor="let i of getStages()" [ngValue]="i.recomendations" class="c-select-box__container-option">
+        {{i.option}}
+      </option>
+    </select>
+    <svg class="c-select-box__icon" width="14" height="8" viewBox="0 0 14 8" fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <path d="M2.0275 0.730164L7 4.63843L11.9725 0.730164L13.5 1.93336L7 7.05336L0.5 1.93336L2.0275 0.730164Z"
+        fill="black" />
+    </svg>
+  </div>
+</section>

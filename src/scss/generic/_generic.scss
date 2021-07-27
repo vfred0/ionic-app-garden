@@ -1,0 +1,22 @@
+a {
+  text-decoration: none;
+  color          : initial;
+}
+
+li {
+  list-style: none;
+
+}
+
+ion-card,
+ion-content,
+ion-toolbar,
+ion-header {
+  --background: var(--color-neutral---white100);
+}
+
+.swiper-pagination-bullet {
+  width        : 16px;
+  height       : 6px;
+  border-radius: 4px;
+}

@@ -1,0 +1,35 @@
+.c-section {
+  &-stages {
+    display    : flex;
+    align-items: center;
+    gap        : .875em;
+
+    &__title {
+      color: var(--color-black);
+    }
+  }
+}
+
+.c-select-box {
+  position: relative;
+  width   : 100vw;
+
+  &__container {
+    padding         : .43em 1.06em;
+    color           : var(--color-black);
+    background-color: var(--color-green);
+    appearance      : none;
+    border          : 0;
+    border-radius   : .65em;
+    width           : 100%;
+
+    &-option {}
+
+  }
+
+  &__icon {
+    position: absolute;
+    right   : 24px;
+    top     : 9px;
+  }
+}

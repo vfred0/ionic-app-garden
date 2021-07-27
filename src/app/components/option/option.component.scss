@@ -1,0 +1,29 @@
+.c-option {
+  width           : 323px;
+  background-color: var(--color-white);
+  border          : none;
+  border-radius   : .75em;
+  box-shadow      : 0 8px 24px rgba(12, 147, 89, 0.125);
+  border-radius   : 12px;
+
+
+  &__link-content {
+    color: var(--color-black);
+  }
+
+  &__icon {}
+
+  &__container {
+    display        : flex;
+    align-items    : center;
+    // grid-gap   : 8px;
+    padding        : 1em;
+    justify-content: space-between;
+    justify-content: space-between;
+
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}

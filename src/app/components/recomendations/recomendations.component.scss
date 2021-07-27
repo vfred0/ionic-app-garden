@@ -1,0 +1,41 @@
+.c-section {
+  &-recomendations {
+    display       : flex;
+    gap           : .625em;
+    flex-direction: column;
+
+    &__title {
+      color: var(--color-black);
+    }
+  }
+}
+
+.c-card {
+  box-shadow   : 0px 7.30726px 21.9218px rgba(12, 147, 89, 0.125);
+  border-radius: 10.9609px;
+
+  &-layout {
+    gap: .875em;
+  }
+
+
+  &__container {
+    gap    : .31em;
+    padding: .9375em;
+    height : 5.25em;
+
+    &-wrapper-icon {
+      width: 34px;
+    }
+
+    &-icon {
+      fill : var(--color-green);
+      width: fit-content;
+    }
+
+    &-description {
+      color: var(--color-black);
+    }
+
+  }
+}

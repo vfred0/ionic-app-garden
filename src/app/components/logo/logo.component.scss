@@ -1,0 +1,11 @@
+section {
+
+  display       : flex;
+  flex-direction: column;
+  align-items   : center;
+  padding-top   : 1em;
+}
+
+span {
+  color: var(--color-neutral---black300);
+}

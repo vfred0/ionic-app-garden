@@ -1,0 +1,23 @@
+.c-content-home {
+
+  &-show-plant {
+    display       : flex;
+    flex-direction: column;
+    gap           : 1em;
+    align-items   : center;
+    margin-top    : 2em;
+  }
+
+}
+
+
+ion-content {
+  --padding-bottom: 1em;
+}
+
+ion-card,
+ion-content,
+ion-toolbar,
+ion-header {
+  --background: var(--color-white);
+}

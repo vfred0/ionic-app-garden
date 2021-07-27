@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Option } from 'src/app/interfaces/interfaces';
 
 @Component({
@@ -8,16 +8,17 @@ import { Option } from 'src/app/interfaces/interfaces';
 })
 export class MenuOptionsComponent implements OnInit {
 
-  options: Option[] = [
-    {
-      name: "Recomendaciones para el cultivo",
-      link: "/modal-plant"
-    },
-    {
-      name: "Calculadora de terreno",
-      link: "/modal-plant"
-    }
-  ]
+  @Input() options: Option[];
+  // options: Option[] = [
+  //   {
+  //     name: "Recomendaciones para el cultivo",
+  //     link: "/modal-plant"
+  //   },
+  //   {
+  //     name: "Calculadora de terreno",
+  //     link: "/modal-plant"
+  //   }
+  // ]
   // options: {name:string, link:string}[] = [
   //   {
   //     name: "Recomendaciones para el cultivo",

@@ -9,3 +9,6 @@ export interface Option {
   link: String
 }
 
+export interface BackMenu {
+  image: String;
+}

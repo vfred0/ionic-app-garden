@@ -11,6 +11,7 @@ import { SlidesComponent } from "./slides/slides.component";
 import { LogoComponent } from "./logo/logo.component";
 import { OptionComponent } from "./option/option.component";
 import { MenuOptionsComponent } from "./menu-options/menu-options.component";
+import { AppRoutingModule } from "../app-routing.module";
 
 
 @NgModule({
@@ -38,7 +39,7 @@ import { MenuOptionsComponent } from "./menu-options/menu-options.component";
     CommonModule,
     IonicModule,
     FormsModule,
-    PlantPageRoutingModule
+    AppRoutingModule
   ]
 })
 

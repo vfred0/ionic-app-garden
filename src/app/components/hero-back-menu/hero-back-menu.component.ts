@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { BackMenu } from 'src/app/interfaces/interfaces';
 
 @Component({
   selector: 'app-hero-back-menu',
@@ -6,8 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hero-back-menu.component.scss'],
 })
 export class HeroBackMenuComponent implements OnInit {
-  public image: string = '/assets/images/slider.png';
-  constructor() { }
+  @Input() index: number;
+
+  private images: String[];
+
+  constructor() {
+    this.images = [
+      "/assets/images/pimiento.png",
+      "/assets/images/select-plant.png"
+    ]
+  }
+
+  getImage(): String {
+    return this.images[this.index];
+  }
 
   ngOnInit() { }
 

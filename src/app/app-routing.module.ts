@@ -12,8 +12,12 @@ const routes: Routes = [
     loadChildren: () => import('./pages/home/home.module').then(m => m.HomePageModule)
   },
   {
-    path: 'plant',
-    loadChildren: () => import('./pages/plant/plant.module').then( m => m.PlantPageModule)
+    path: 'plant/:namePlant',
+    loadChildren: () => import('./pages/plant/plant.module').then(m => m.PlantPageModule)
+  },
+  {
+    path: 'select-plant',
+    loadChildren: () => import('./pages/select-plant/select-plant.module').then(m => m.SelectPlantPageModule)
   }
 ];
 @NgModule({

@@ -37,10 +37,10 @@ export class StageService {
     if (item.length < 45) {
       type = "smaller";
     }
-    else if (item.length > 45 && item.length < 80) {
+    else if (item.length > 45 && item.length < 60) {
       type = "small";
     }
-    else if (item.length > 80 && item.length < 110) {
+    else if (item.length > 60 && item.length < 80) {
       type = "large";
     }
     else {

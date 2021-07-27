@@ -1,6 +1,5 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
-import { ShowPlantComponent } from "./show-plant/show-plant.component";
 import { IonicModule } from "@ionic/angular";
 import { RecomendationsComponent } from "./recomendations/recomendations.component";
 import { StagesComponent } from "./stages/stages.component";
@@ -16,7 +15,6 @@ import { MenuOptionsComponent } from "./menu-options/menu-options.component";
 
 @NgModule({
   declarations: [
-    ShowPlantComponent,
     StagesComponent,
     RecomendationsComponent,
     HeroBackMenuComponent,
@@ -27,7 +25,6 @@ import { MenuOptionsComponent } from "./menu-options/menu-options.component";
     MenuOptionsComponent
   ],
   exports: [
-    ShowPlantComponent,
     StagesComponent,
     RecomendationsComponent,
     HeroBackMenuComponent,

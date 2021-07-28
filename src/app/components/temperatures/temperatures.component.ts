@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 import { Button, ButtonTemperature, Temperature } from 'src/app/interfaces/interfaces';
 
 @Component({
@@ -9,7 +9,8 @@ import { Button, ButtonTemperature, Temperature } from 'src/app/interfaces/inter
 export class TemperaturesComponent implements OnInit {
 
   private buttons: ButtonTemperature[];
-  private temperatures: Temperature[];
+  @Input() private temperatures: Temperature[];
+
   constructor() {
     this.buttons = [
       {
@@ -17,7 +18,7 @@ export class TemperaturesComponent implements OnInit {
         class: "o-button-color-g100",
         temperatures: [
           {
-            title: "Minim",
+            title: "Mínimo",
             degrees: "23ºC"
           },
           {
@@ -35,7 +36,7 @@ export class TemperaturesComponent implements OnInit {
         class: "o-button-disable o-button-color-w200",
         temperatures: [
           {
-            title: "Minim",
+            title: "Mínimo",
             degrees: "100ºC"
           },
           {
@@ -53,7 +54,7 @@ export class TemperaturesComponent implements OnInit {
         class: "o-button-disable o-button-color-w200",
         temperatures: [
           {
-            title: "Minim",
+            title: "Mínimo",
             degrees: "10ºC"
           },
           {

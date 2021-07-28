@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Stage } from 'src/app/interfaces/interfaces';
 import { StageService } from '../../services/stage.service';
 
@@ -8,7 +8,7 @@ import { StageService } from '../../services/stage.service';
   styleUrls: ['./stages.component.scss'],
 })
 export class StagesComponent implements OnInit {
-
+  @Input() private stages: String[];
 
   dataRecomendations: string[];
   constructor(private _stageService: StageService) {

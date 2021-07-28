@@ -9,6 +9,11 @@ export interface Option {
   parameters: boolean;
 }
 
+export interface OptionButton {
+  content: String;
+  class: String[];
+}
+
 export interface BackMenu {
   image: String;
   link: String;

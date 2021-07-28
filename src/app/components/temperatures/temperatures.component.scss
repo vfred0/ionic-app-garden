@@ -12,4 +12,10 @@ span {
     flex-flow: row wrap;
     gap      : .5em;
   }
+
+  &__container-boxes {
+    display        : flex;
+    justify-content: center;
+    gap            : 1em;
+  }
 }

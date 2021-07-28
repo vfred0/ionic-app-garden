@@ -14,6 +14,7 @@ import { MenuOptionsComponent } from "./menu-options/menu-options.component";
 import { AppRoutingModule } from "../app-routing.module";
 import { ButtonComponent } from "./button/button.component";
 import { TemperaturesComponent } from "./temperatures/temperatures.component";
+import { BoxTemperatureComponent } from "./box-temperature/box-temperature.component";
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { TemperaturesComponent } from "./temperatures/temperatures.component";
     OptionComponent,
     MenuOptionsComponent,
     ButtonComponent,
-    TemperaturesComponent
+    TemperaturesComponent,
+    BoxTemperatureComponent
   ],
   exports: [
     StagesComponent,
@@ -38,7 +40,8 @@ import { TemperaturesComponent } from "./temperatures/temperatures.component";
     LogoComponent,
     MenuOptionsComponent,
     ButtonComponent,
-    TemperaturesComponent
+    TemperaturesComponent,
+    BoxTemperatureComponent
 
   ],
   imports: [

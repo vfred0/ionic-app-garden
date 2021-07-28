@@ -12,6 +12,8 @@ import { LogoComponent } from "./logo/logo.component";
 import { OptionComponent } from "./option/option.component";
 import { MenuOptionsComponent } from "./menu-options/menu-options.component";
 import { AppRoutingModule } from "../app-routing.module";
+import { ButtonComponent } from "./button/button.component";
+import { TemperaturesComponent } from "./temperatures/temperatures.component";
 
 
 @NgModule({
@@ -23,7 +25,9 @@ import { AppRoutingModule } from "../app-routing.module";
     SlidesComponent,
     LogoComponent,
     OptionComponent,
-    MenuOptionsComponent
+    MenuOptionsComponent,
+    ButtonComponent,
+    TemperaturesComponent
   ],
   exports: [
     StagesComponent,
@@ -32,7 +36,9 @@ import { AppRoutingModule } from "../app-routing.module";
     AboutPlantComponent,
     SlidesComponent,
     LogoComponent,
-    MenuOptionsComponent
+    MenuOptionsComponent,
+    ButtonComponent,
+    TemperaturesComponent
 
   ],
   imports: [

@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { OptionButton } from 'src/app/interfaces/interfaces';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Button } from 'src/app/interfaces/interfaces';
+
 
 @Component({
   selector: 'app-button',
@@ -8,19 +9,27 @@ import { OptionButton } from 'src/app/interfaces/interfaces';
 })
 export class ButtonComponent implements OnInit {
 
-  @Input() private options: OptionButton;
-
+  @Input() private button: Button;
+  @Output() getButton = new EventEmitter();
   constructor() { }
 
   public clickButton() {
-
+    this.getButton.emit(this.button);
   }
 
 
-  public getContent(): String {
-    return "Lecho elevado";
+  public getTitle(): String {
+    return this.button.title;
   }
 
-  ngOnInit() { }
+  public getClasses(): String {
+    return this.button.class;
+  }
+
+
+
+  ngOnInit() {
+
+  }
 
 }

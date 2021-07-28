@@ -9,12 +9,19 @@ export interface Option {
   parameters: boolean;
 }
 
-export interface OptionButton {
-  content: String;
-  class: String[];
+export interface Button {
+  title: String;
+  class: String;
+}
+
+export interface ButtonTemperature extends Button {
+  minimun: String;
+  optimun: String;
+  maximun: String;
 }
 
 export interface BackMenu {
   image: String;
   link: String;
 }
+

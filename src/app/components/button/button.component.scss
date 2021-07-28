@@ -1,0 +1,14 @@
+.button {
+  box-shadow   : 0px 7px 21px rgba(0, 0, 0, 0.12);
+  border-radius: 12px;
+
+  &__title {
+    color: var(--color-neutral---black200);
+  }
+
+  &__container {
+    padding      : .5em 0;
+    padding-left : 1em;
+    padding-right: 1em;
+  }
+}

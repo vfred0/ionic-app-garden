@@ -1,5 +1,5 @@
-<button class="button" onclick="clickButton()">
+<button class="button" [ngClass]="getClasses()" (click)="clickButton()">
   <div class="button__container">
-    <span class="button__container-content"> {{getContent()}} </span>
+    <span class="button__title"> {{getTitle()}} </span>
   </div>
 </button>

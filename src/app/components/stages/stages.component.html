@@ -1,7 +1,7 @@
 <section class="c-section-stages">
   <span class="c-section-stages__title o-font-subtitle">Etapa</span>
   <div class="c-select-box">
-    <select class="c-select-box__container o-font-smaller" [(ngModel)]="dataRecomendations"
+    <select class="c-select-box__container o-font-small" [(ngModel)]="dataRecomendations"
       (ngModelChange)="updateDataRecomendations()">
       <option *ngFor="let i of getStages()" [ngValue]="i.recomendations" class="c-select-box__container-option">
         {{i.option}}

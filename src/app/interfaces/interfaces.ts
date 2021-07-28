@@ -16,9 +16,6 @@ export interface Button {
 
 export interface ButtonTemperature extends Button {
   temperatures: BoxTemperature[];
-  // minimun: String;
-  // optimun: String;
-  // maximun: String;
 }
 
 export interface BackMenu {

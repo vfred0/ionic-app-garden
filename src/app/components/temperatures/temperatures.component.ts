@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BoxTemperature, Button, ButtonTemperature } from 'src/app/interfaces/interfaces';
+import { Button, ButtonTemperature, Temperature } from 'src/app/interfaces/interfaces';
 
 @Component({
   selector: 'app-temperatures',
@@ -9,7 +9,7 @@ import { BoxTemperature, Button, ButtonTemperature } from 'src/app/interfaces/in
 export class TemperaturesComponent implements OnInit {
 
   private buttons: ButtonTemperature[];
-  private boxTemperatures: BoxTemperature[];
+  private temperatures: Temperature[];
   constructor() {
     this.buttons = [
       {
@@ -17,16 +17,16 @@ export class TemperaturesComponent implements OnInit {
         class: "o-button-color-g100",
         temperatures: [
           {
-            title: "Mínimo",
-            temperature: "23ºC"
+            title: "Minim",
+            degrees: "23ºC"
           },
           {
             title: "Maximo",
-            temperature: "32ºC"
+            degrees: "32ºC"
           },
           {
             title: "Optimo",
-            temperature: "12ºC"
+            degrees: "12ºC"
           }
         ]
       },
@@ -35,16 +35,16 @@ export class TemperaturesComponent implements OnInit {
         class: "o-button-disable o-button-color-w200",
         temperatures: [
           {
-            title: "Mínimo",
-            temperature: "100ºC"
+            title: "Minim",
+            degrees: "100ºC"
           },
           {
             title: "Maximo",
-            temperature: "100ºC"
+            degrees: "100ºC"
           },
           {
             title: "Optimo",
-            temperature: "100ºC"
+            degrees: "100ºC"
           }
         ]
       },
@@ -53,22 +53,22 @@ export class TemperaturesComponent implements OnInit {
         class: "o-button-disable o-button-color-w200",
         temperatures: [
           {
-            title: "Mínimo",
-            temperature: "10ºC"
+            title: "Minim",
+            degrees: "10ºC"
           },
           {
             title: "Maximo",
-            temperature: "8ºC"
+            degrees: "8ºC"
           },
           {
             title: "Optimo",
-            temperature: "9ºC"
+            degrees: "9ºC"
           }
         ]
       }
     ]
 
-    this.boxTemperatures = this.buttons[0].temperatures;
+    this.temperatures = this.buttons[0].temperatures;
   }
 
 
@@ -82,15 +82,15 @@ export class TemperaturesComponent implements OnInit {
         if (b.title != button.title) {
           b.class = 'button-disable o-button-color-w200';
         } else {
-          this.boxTemperatures = b.temperatures;
+          this.temperatures = b.temperatures;
         }
       })
     }
     button.class = 'button-enable o-button-color-g100';
   }
 
-  getBoxTemperatures(): BoxTemperature[] {
-    return this.boxTemperatures;
+  getTemperatures(): Temperature[] {
+    return this.temperatures;
   }
 
   ngOnInit() {

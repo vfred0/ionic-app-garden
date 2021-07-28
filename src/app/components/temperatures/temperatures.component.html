@@ -4,7 +4,7 @@
     <app-button *ngFor="let button of getButtons()" [button]="button" (getButton)="eventButon($event)"> </app-button>
   </div>
   <div class="temperatures__container-boxes">
-    <app-box-temperature *ngFor="let boxTemperature of getBoxTemperatures()" [boxTemperature]="boxTemperature">
+    <app-box-temperature *ngFor="let temperature of getTemperatures()" [temperature]="temperature">
     </app-box-temperature>
   </div>
 </div>

@@ -1,10 +1,14 @@
 <ion-content>
   <app-hero-back-menu [optionsBackMenu]="getOptionsBackMenu()"></app-hero-back-menu>
   <main class="o-container">
-    <app-about-plant></app-about-plant>
+    <!-- <app-about-plant></app-about-plant>
     <app-temperatures></app-temperatures>
     <app-stages> </app-stages>
-    <app-recomendations></app-recomendations>
+    <app-recomendations></app-recomendations> -->
+    <app-about-plant [aboutPlant]="getAboutPlant()"></app-about-plant>
+    <app-temperatures [temperatures]="getTemperatures()"></app-temperatures>
+    <app-stages [stages]="getStages()" (recomendations)="setRecomendations($event)"> </app-stages>
+    <app-recomendations [recomendations]="getRecomendations()"></app-recomendations>
   </main>
 
 </ion-content>

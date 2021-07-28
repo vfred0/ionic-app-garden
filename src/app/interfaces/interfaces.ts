@@ -1,5 +1,5 @@
 export interface Stage {
-  option: string;
+  title: string;
   recomendations: string[];
 }
 
@@ -15,7 +15,12 @@ export interface Button {
 }
 
 export interface ButtonTemperature extends Button {
-  temperatures: BoxTemperature[];
+  temperatures: Temperature[];
+}
+
+export interface Temperature {
+  title: String;
+  degrees: String;
 }
 
 export interface BackMenu {
@@ -23,7 +28,9 @@ export interface BackMenu {
   link: String;
 }
 
-export interface BoxTemperature {
-  title: String;
-  temperature: String;
+
+export interface Plant {
+  name: String;
+  description: String;
+  stages: Stage[];
 }

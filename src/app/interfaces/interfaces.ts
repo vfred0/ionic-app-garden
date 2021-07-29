@@ -6,7 +6,6 @@ export interface Stage {
 export interface Option {
   name: String;
   link: String;
-  parameters: boolean;
 }
 
 export interface Button {
@@ -14,13 +13,14 @@ export interface Button {
   class: String;
 }
 
-export interface ButtonTemperature extends Button {
-  temperatures: Temperature[];
-}
-
 export interface Temperature {
   title: String;
   degrees: String;
+}
+
+export interface TemperatureStage {
+  name: String;
+  temperatures: Temperature[];
 }
 
 export interface BackMenu {
@@ -33,4 +33,6 @@ export interface Plant {
   name: String;
   description: String;
   stages: Stage[];
+  temperaturesStages: TemperatureStage[];
+  image: String;
 }

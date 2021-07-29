@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { BackMenu, ButtonTemperature, Stage } from 'src/app/interfaces/interfaces';
+import { ActivatedRoute } from '@angular/router';
+import { BackMenu, TemperatureStage, Stage } from 'src/app/interfaces/interfaces';
 import { PlantService } from 'src/app/services/plant/plant.service';
 
 @Component({
@@ -11,22 +12,24 @@ import { PlantService } from 'src/app/services/plant/plant.service';
 export class PlantPage implements OnInit {
   private optionsBackMenu: BackMenu;
 
-  constructor(private plantService: PlantService) {
-    this.optionsBackMenu = {
-      image: "/assets/images/pimiento.png",
-      link: "/select-plant"
-    };
+
+  constructor(private activatedRoute: ActivatedRoute, private plantService: PlantService) {
+    // this.optionsBackMenu = {
+    //   image: "/assets/images/pimiento.png",
+    //   link: "/select-plant"
+    // };
   }
 
   getRecomendations(): String[] {
     return this.plantService.getRecomendations();
   }
 
-  setRecomendations(recomendations: String[]) {
-    this.plantService.setRecomendations(recomendations);
+  setRecomendations(stage: String) {
+    this.plantService.setRecomendations(stage);
   }
-  getTemperatures(): ButtonTemperature[] {
-    return this.plantService.getTemperatures();
+
+  getTemperatures(): TemperatureStage[] {
+    return this.plantService.getTemperaturesStages();
   }
 
   getAboutPlant(): String[] {
@@ -41,5 +44,15 @@ export class PlantPage implements OnInit {
   }
 
   ngOnInit() {
+    this.activatedRoute.params.subscribe(({ namePlant }) => {
+      console.log(namePlant)
+      this.plantService.setNamePlant(namePlant);
+    })
+
+
+    this.optionsBackMenu = {
+      image: this.plantService.getPathImage(),
+      link: "/select-plant"
+    }
   }
 }

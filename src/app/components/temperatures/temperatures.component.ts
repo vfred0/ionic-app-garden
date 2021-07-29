@@ -1,5 +1,5 @@
 import { Component, Input, OnInit, Output } from '@angular/core';
-import { Button, ButtonTemperature, Temperature } from 'src/app/interfaces/interfaces';
+import { Button, Temperature, TemperatureStage } from 'src/app/interfaces/interfaces';
 
 @Component({
   selector: 'app-temperatures',
@@ -8,68 +8,12 @@ import { Button, ButtonTemperature, Temperature } from 'src/app/interfaces/inter
 })
 export class TemperaturesComponent implements OnInit {
 
-  private buttons: ButtonTemperature[];
-  @Input() private temperatures: Temperature[];
+  private buttons: Button[];
+  @Input() private temperaturesStages: TemperatureStage[];
+  private temperatures: Temperature[];
 
   constructor() {
-    this.buttons = [
-      {
-        title: "Germinación",
-        class: "o-button-color-g100",
-        temperatures: [
-          {
-            title: "Mínimo",
-            degrees: "23ºC"
-          },
-          {
-            title: "Maximo",
-            degrees: "32ºC"
-          },
-          {
-            title: "Optimo",
-            degrees: "12ºC"
-          }
-        ]
-      },
-      {
-        title: "Crecimiento vegetativo",
-        class: "o-button-disable o-button-color-w200",
-        temperatures: [
-          {
-            title: "Mínimo",
-            degrees: "100ºC"
-          },
-          {
-            title: "Maximo",
-            degrees: "100ºC"
-          },
-          {
-            title: "Optimo",
-            degrees: "100ºC"
-          }
-        ]
-      },
-      {
-        title: "Floración y fructificación",
-        class: "o-button-disable o-button-color-w200",
-        temperatures: [
-          {
-            title: "Mínimo",
-            degrees: "10ºC"
-          },
-          {
-            title: "Maximo",
-            degrees: "8ºC"
-          },
-          {
-            title: "Optimo",
-            degrees: "9ºC"
-          }
-        ]
-      }
-    ]
-
-    this.temperatures = this.buttons[0].temperatures;
+    this.buttons = new Array();
   }
 
 
@@ -82,12 +26,15 @@ export class TemperaturesComponent implements OnInit {
       this.buttons.forEach(b => {
         if (b.title != button.title) {
           b.class = 'button-disable o-button-color-w200';
-        } else {
-          this.temperatures = b.temperatures;
         }
       })
     }
     button.class = 'button-enable o-button-color-g100';
+    this.temperaturesStages.forEach(i => {
+      if (i.name == button.title) {
+        this.temperatures = i.temperatures;
+      }
+    })
   }
 
   getTemperatures(): Temperature[] {
@@ -95,9 +42,44 @@ export class TemperaturesComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.sortedTemperatures();
+    console.log("oredenado ", this.temperaturesStages)
+    this.temperaturesStages.forEach((temperatureStage, index) => {
+      let button: Button;
+      if (index === 0) {
+        button = {
+          title: temperatureStage.name,
+          class: "o-button-color-g100"
+        }
+      } else {
+        button = {
+          title: temperatureStage.name,
+          class: "o-button-disable o-button-color-w200"
+        }
+      }
+      this.buttons.push(button);
+    })
 
+
+    this.temperatures = this.temperaturesStages[0].temperatures;
+  }
+
+  private sortedTemperatures() {
+    this.temperaturesStages.sort((i: any, j: any) => i.name.length > j.name.length ? 1 : -1)
+    // this.temperaturesStages.sort(function (a, b) {
+    //   if (a.name.length > b.name.length) {
+    //     return 1;
+    //   }
+    //   if (a.name.length < b.name.length) {
+    //     return -1;
+    //   }
+    //   // a must be equal to b
+    //   return 0;
+    // })
+
+    // https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
   }
 
 
-
 }
+

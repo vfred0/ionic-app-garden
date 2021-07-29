@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Optional } from '@angular/core';
 import { BackMenu, Option } from 'src/app/interfaces/interfaces';
+import { PlantService } from 'src/app/services/plant/plant.service';
 
 @Component({
   selector: 'app-select-plant',
@@ -11,25 +12,12 @@ export class SelectPlantPage implements OnInit {
   private optionsBackMenu: BackMenu;
   private optionsMenu: Option[];
 
-  constructor() {
+  constructor(private plantService: PlantService) {
+    this.optionsMenu = new Array();
     this.optionsBackMenu = {
       image: "/assets/images/select-plant.png",
       link: "/home"
     };
-
-    this.optionsMenu = [
-      {
-        name: "Pimiento",
-        link: "/plant/Pimiento",
-        parameters: true
-      },
-      {
-        name: "Rabano",
-        link: "/plant/Pimiento",
-        parameters: true
-      }
-    ];
-
   }
 
   getOptionsMenu(): Option[] {
@@ -41,6 +29,12 @@ export class SelectPlantPage implements OnInit {
   }
 
   ngOnInit() {
+    this.plantService.getAllNamePlants().forEach(namePlant => {
+      this.optionsMenu.push({
+        name: namePlant,
+        link: `/plant/${namePlant}`
+      })
+    })
   }
 
 }

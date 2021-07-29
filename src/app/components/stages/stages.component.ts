@@ -1,6 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Stage } from 'src/app/interfaces/interfaces';
-import { StageService } from '../../services/stage.service';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+
 
 @Component({
   selector: 'app-stages',
@@ -9,18 +8,22 @@ import { StageService } from '../../services/stage.service';
 })
 export class StagesComponent implements OnInit {
   @Input() private stages: String[];
+  @Output() private stageEventEmitter = new EventEmitter();
 
-  dataRecomendations: string[];
-  constructor(private _stageService: StageService) {
-    this.dataRecomendations = this._stageService.getRecomendations();
-  }
-  public getStages(): Stage[] {
-    return [...this._stageService.getStages()];
+  onChangeStage(stageSelected: String) {
+    this.stageEventEmitter.emit(stageSelected);
   }
 
-  public updateDataRecomendations() {
-    this._stageService.setRecomendations(this.dataRecomendations);
+  getStages(): String[] {
+    return this.stages;
   }
-  ngOnInit() { }
+
+  constructor() {
+  }
+
+
+  ngOnInit() {
+    this.stageEventEmitter.emit(this.getStages()[0]);
+  }
 
 }

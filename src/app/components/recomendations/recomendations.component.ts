@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { StageService } from '../../services/stage.service';
+import { RecomendationsService } from 'src/app/services/recomendations/recomendations.service';
+
 
 @Component({
   selector: 'app-recomendations',
@@ -8,22 +9,21 @@ import { StageService } from '../../services/stage.service';
 })
 export class RecomendationsComponent implements OnInit {
   @Input() private recomendations: String[];
-  constructor(private _stageService: StageService) {
+  constructor(private recomendationsService: RecomendationsService) {
   }
 
   ngOnInit() { }
 
-  public getRecomendations(): string[] {
-    return [...this._stageService.getRecomendations()];
+  getOptionWrap(item: string) {
+    return this.recomendationsService.getOptionWrap(item);
   }
 
-  public getOptionWrap(item: string) {
-    return this._stageService.getOptionWrap(item);
+  getTypeLayout(item: string): string {
+    return this.recomendationsService.getTypeLayout(item);
   }
 
-  public getTypeLayout(item: string): string {
-    return this._stageService.getTypeLayout(item);
+  getRecomendations(): String[] {
+    return this.recomendationsService.getSortRecomendations(this.recomendations);
   }
-
 
 }

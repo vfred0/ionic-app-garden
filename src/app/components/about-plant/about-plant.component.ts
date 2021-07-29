@@ -14,11 +14,11 @@ export class AboutPlantComponent implements OnInit {
   ngOnInit() { }
 
   getTitle(): String {
-    return "";
+    return this.aboutPlant[0];
   }
 
   getDescription(): String {
-    return "";
+    return this.aboutPlant[1];
   }
 
 }

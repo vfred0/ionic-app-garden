@@ -14,14 +14,12 @@ export class HomePage implements OnInit {
     this.optionsMenu = [
       {
         name: "Recomendaciones para el cultivo",
-        link: "/select-plant",
-        parameters: false
+        link: "/select-plant"
 
       },
       {
         name: "Calculadora de terreno",
-        link: "/land-calculator",
-        parameters: false
+        link: "/land-calculator"
       }
     ];
   }

@@ -1,0 +1,22 @@
+<ion-content>
+
+  <app-hero-back-menu [optionsBackMenu]="getOptionsBackMenu()"></app-hero-back-menu>
+  <main class="o-container">
+    <section class="garden-style">
+      <div class="garden-style__container">
+        <span class="garden-style__title o-font-subtitle">Estilo</span>
+        <app-button *ngFor="let button of getButtonsGardenStyle()" [button]="button" (getButton)="eventButton($event)">
+        </app-button>
+      </div>
+    </section>
+    <section class="shape">
+
+    </section>
+    <section class="measurements">
+
+    </section>
+    <section class="result">
+
+    </section>
+  </main>
+</ion-content>

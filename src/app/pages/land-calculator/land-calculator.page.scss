@@ -1,0 +1,11 @@
+.garden-style {
+  &__container {
+    display    : flex;
+    gap        : 1em;
+    align-items: center;
+  }
+
+  &__title {
+    color: var(--color-neutral---black500);
+  }
+}

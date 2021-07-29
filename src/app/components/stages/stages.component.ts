@@ -18,6 +18,7 @@ export class StagesComponent implements OnInit {
     return this.stages;
   }
 
+
   constructor() {
   }
 

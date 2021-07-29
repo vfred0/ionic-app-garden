@@ -15,6 +15,7 @@ import { AppRoutingModule } from "../app-routing.module";
 import { ButtonComponent } from "./button/button.component";
 import { TemperaturesComponent } from "./temperatures/temperatures.component";
 import { BoxTemperatureComponent } from "./box-temperature/box-temperature.component";
+import { SelectComponent } from "./select/select.component";
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { BoxTemperatureComponent } from "./box-temperature/box-temperature.compo
     MenuOptionsComponent,
     ButtonComponent,
     TemperaturesComponent,
-    BoxTemperatureComponent
+    BoxTemperatureComponent,
+    SelectComponent
   ],
   exports: [
     StagesComponent,
@@ -41,7 +43,8 @@ import { BoxTemperatureComponent } from "./box-temperature/box-temperature.compo
     MenuOptionsComponent,
     ButtonComponent,
     TemperaturesComponent,
-    BoxTemperatureComponent
+    BoxTemperatureComponent,
+    SelectComponent
 
   ],
   imports: [

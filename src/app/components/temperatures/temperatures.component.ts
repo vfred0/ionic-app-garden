@@ -43,7 +43,6 @@ export class TemperaturesComponent implements OnInit {
 
   ngOnInit() {
     this.sortedTemperatures();
-    console.log("oredenado ", this.temperaturesStages)
     this.temperaturesStages.forEach((temperatureStage, index) => {
       let button: Button;
       if (index === 0) {

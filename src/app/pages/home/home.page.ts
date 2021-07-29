@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BackMenu, Option } from 'src/app/interfaces/interfaces';
+import { Option } from 'src/app/interfaces/interfaces';
 
 @Component({
   selector: 'app-home',

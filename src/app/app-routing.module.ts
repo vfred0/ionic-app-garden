@@ -18,6 +18,10 @@ const routes: Routes = [
   {
     path: 'select-plant',
     loadChildren: () => import('./pages/select-plant/select-plant.module').then(m => m.SelectPlantPageModule)
+  },
+  {
+    path: 'land-calculator',
+    loadChildren: () => import('./pages/land-calculator/land-calculator.module').then( m => m.LandCalculatorPageModule)
   }
 ];
 @NgModule({

@@ -180,7 +180,7 @@ export class PlantService {
     return this.recomendations;
   }
 
-  setRecomendations(stage: String) {
+  setNameStage(stage: String) {
     let result: String[] = new Array();
     this.plants.forEach(plant => {
       if (plant.name === this.namePlant) {

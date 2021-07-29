@@ -21,7 +21,7 @@ export class TemperaturesComponent implements OnInit {
     return this.buttons;
   }
 
-  eventButon(button: Button) {
+  eventButton(button: Button) {
     if (button.class.includes('disable')) {
       this.buttons.forEach(b => {
         if (b.title != button.title) {

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { BackMenu, TemperatureStage, Stage } from 'src/app/interfaces/interfaces';
+import { BackMenu, TemperatureStage } from 'src/app/interfaces/interfaces';
 import { PlantService } from 'src/app/services/plant/plant.service';
 
 @Component({
@@ -12,20 +12,14 @@ import { PlantService } from 'src/app/services/plant/plant.service';
 export class PlantPage implements OnInit {
   private optionsBackMenu: BackMenu;
 
-
-  constructor(private activatedRoute: ActivatedRoute, private plantService: PlantService) {
-    // this.optionsBackMenu = {
-    //   image: "/assets/images/pimiento.png",
-    //   link: "/select-plant"
-    // };
-  }
+  constructor(private activatedRoute: ActivatedRoute, private plantService: PlantService) { }
 
   getRecomendations(): String[] {
     return this.plantService.getRecomendations();
   }
 
-  setRecomendations(stage: String) {
-    this.plantService.setRecomendations(stage);
+  setNameStage(stage: String) {
+    this.plantService.setNameStage(stage);
   }
 
   getTemperatures(): TemperatureStage[] {

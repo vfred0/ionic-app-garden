@@ -13,20 +13,17 @@ export class ButtonComponent implements OnInit {
   @Output() getButton = new EventEmitter();
   constructor() { }
 
-  public clickButton() {
+  clickButton() {
     this.getButton.emit(this.button);
   }
 
-
-  public getTitle(): String {
+  getTitle(): String {
     return this.button.title;
   }
 
-  public getClasses(): String {
+  getClasses(): String {
     return this.button.class;
   }
-
-
 
   ngOnInit() {
 

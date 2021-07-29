@@ -3,7 +3,7 @@
   <main class="o-container">
     <app-about-plant [aboutPlant]="getAboutPlant()"></app-about-plant>
     <app-temperatures [temperaturesStages]="getTemperatures()"></app-temperatures>
-    <app-stages [stages]="getStages()" (stageEventEmitter)="setRecomendations($event)"> </app-stages>
+    <app-stages [stages]="getStages()" (stageEventEmitter)="setNameStage($event)"> </app-stages>
     <app-recomendations [recomendations]="getRecomendations()"></app-recomendations>
   </main>
 

@@ -1,0 +1,25 @@
+.c-select {
+  position: relative;
+  width   : 73vmin;
+
+  &__container {
+    outline         : none;
+    padding         : .43em 1.06em;
+    color           : var(--color-neutral---black300);
+    background-color: var(--color-primary---green100);
+    appearance      : none;
+    border          : 0;
+    border-radius   : .65em;
+    width           : 100%;
+
+    &-option {}
+
+  }
+
+  &__icon {
+    position: absolute;
+    right   : 24px;
+    top     : 9px;
+    fill    : var(--color-neutral---black300);
+  }
+}

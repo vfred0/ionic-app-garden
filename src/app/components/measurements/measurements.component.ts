@@ -11,6 +11,7 @@ export class MeasurementsComponent implements OnInit {
   @Output() private getResults = new EventEmitter();
   form: FormGroup;
   @Input() private controlName: ControlName[];
+  @Output() private buttonReset = new EventEmitter();
 
   constructor(private fb: FormBuilder) {
     console.log('contructor')
@@ -30,8 +31,10 @@ export class MeasurementsComponent implements OnInit {
         })
       })
       this.getResults.emit(result);
+    } else {
+      this.buttonReset.emit();
     }
-    console.log("reset")
+
     this.form.reset();
   }
 

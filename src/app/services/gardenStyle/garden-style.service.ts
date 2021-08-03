@@ -11,10 +11,17 @@ export class GardenStyleService {
 
 
   setResults(controlName: ControlName[]) {
-    this.recomendations = []
-    controlName.forEach(item => {
-      this.recomendations.push(`${item.name}--${item.value}`)
-    })
+    console.log(controlName)
+    if (controlName.length > 0) {
+      console.log("esta vacion")
+      this.recomendations = ["Aplicar 2.7 de yardas cúbicas de tierra", "Aplicar 1.5 de tazas de fertilizante multiuso (aplicar 0, 5 tazas por cada 5 pies cuadrados)"]
+    } else {
+      this.recomendations = []
+    }
+    // controlName.forEach(item => {
+    //   this.recomendations.push(`${item.name}--${item.value}`)
+    // })
+
   }
   private recomendations: String[];
   private gardenStyles: GardenStyle[];

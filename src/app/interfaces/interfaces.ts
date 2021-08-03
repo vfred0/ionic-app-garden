@@ -36,3 +36,18 @@ export interface Plant {
   temperaturesStages: TemperatureStage[];
   image: String;
 }
+
+export interface GardenStyle {
+  name: String;
+  shape: Shape[];
+}
+
+export interface Shape {
+  name: String;
+  controlName: ControlName[];
+}
+
+export interface ControlName {
+  name: String;
+  value: String;
+}

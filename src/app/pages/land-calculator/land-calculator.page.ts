@@ -19,6 +19,9 @@ export class LandCalculatorPage implements OnInit {
       link: "/home"
     }
   }
+  resetRecomendations() {
+    this.setResults([])
+  }
 
   getRecomendations(): String[] {
     return this.gardenStyle.getRecomendations();

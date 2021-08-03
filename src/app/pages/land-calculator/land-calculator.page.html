@@ -17,7 +17,8 @@
       </div>
     </section>
     <section class="measurements">
-      <app-measurements [controlName]="getMeasurements()" (getResults)="setResults($event)"></app-measurements>
+      <app-measurements [controlName]="getMeasurements()" (buttonReset)="resetRecomendations()"
+        (getResults)="setResults($event)"></app-measurements>
     </section>
     <section class="result">
       <!-- <span class="result__title o-font-subtitle">Resultados</span> -->

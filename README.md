@@ -1,4 +1,5 @@
 # ionic-app-garden
+## npm install
 
 # Home
 ![alt text](https://github.com/vfred0/ionic-app-garden/blob/main/docs/home.png?raw=true)

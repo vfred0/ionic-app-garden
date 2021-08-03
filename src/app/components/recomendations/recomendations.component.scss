@@ -6,10 +6,7 @@
 
     &__title {
       text-align: center;
-      // &__title {
-      // }
-
-      color: var(--color-neutral---black400);
+      color     : var(--color-neutral---black400);
     }
   }
 }
@@ -33,7 +30,7 @@
     }
 
     &-icon {
-      fill : var(--color-neutral---black200);
+      // fill : var(--color-neutral---black200);
       width: fit-content;
     }
 

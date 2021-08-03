@@ -5,18 +5,23 @@
     <section class="garden-style">
       <div class="garden-style__container">
         <span class="garden-style__title o-font-subtitle">Estilo</span>
-        <app-button *ngFor="let button of getButtonsGardenStyle()" [button]="button" (getButton)="eventButton($event)">
+        <app-button *ngFor="let button of getButtonsGardenStyle()" [button]="button"
+          (getButton)="onChangeSelectButton($event)">
         </app-button>
       </div>
     </section>
     <section class="shape">
-
+      <div class="shape__container">
+        <span class="shape__title o-font-subtitle">Forma</span>
+        <app-select [options]="getShapeOptions()" (selectOption)="onChangeShapeOption($event)"></app-select>
+      </div>
     </section>
     <section class="measurements">
-
+      <app-measurements [controlName]="getMeasurements()" (getResults)="setResults($event)"></app-measurements>
     </section>
     <section class="result">
-
+      <!-- <span class="result__title o-font-subtitle">Resultados</span> -->
+      <app-recomendations [recomendations]="getRecomendations()"></app-recomendations>
     </section>
   </main>
 </ion-content>

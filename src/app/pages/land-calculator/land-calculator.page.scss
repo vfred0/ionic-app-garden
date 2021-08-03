@@ -1,11 +1,33 @@
-.garden-style {
+.garden-style,
+.shape {
   &__container {
     display    : flex;
     gap        : 1em;
     align-items: center;
   }
+}
 
+.garden-style,
+.shape,
+.result,
+.measurements {
   &__title {
-    color: var(--color-neutral---black500);
+    color: var(--color-neutral---black400);
   }
+
+}
+
+.result,
+.measurements {
+  &__title {
+    // display   : inherit; // for center text 
+    // text-align: center;
+  }
+}
+
+
+main {
+  display       : flex;
+  flex-direction: column;
+  gap           : 2em;
 }

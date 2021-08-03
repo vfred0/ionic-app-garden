@@ -17,7 +17,7 @@ export class RecomendationsService {
     else if (item.length > 45 && item.length < 60) {
       type = "small";
     }
-    else if (item.length > 60 && item.length < 80) {
+    else if (item.length > 60 && item.length < 95) {
       type = "large";
     }
     else {

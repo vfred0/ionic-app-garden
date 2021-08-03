@@ -1,0 +1,8 @@
+<form class="form" [formGroup]="form">
+  <span class="form__title o-font-subtitle">Medidas</span>
+  <input *ngFor="let item of getControlName()" [formControlName]="item.name" type="number" [placeholder]="item.value"
+    class="o-font-small">
+  <div class="form__container-buttons">
+    <app-button *ngFor="let button of getButton()" [button]="button" (getButton)="eventButton($event)"></app-button>
+  </div>
+</form>

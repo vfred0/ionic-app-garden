@@ -9,7 +9,7 @@ describe('RecomendationsComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ RecomendationsComponent ],
+      declarations: [RecomendationsComponent],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
@@ -21,4 +21,5 @@ describe('RecomendationsComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  // #dsajf2
 });

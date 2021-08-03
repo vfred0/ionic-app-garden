@@ -1,5 +1,8 @@
 <section class="c-section-recomendations">
-  <span class="c-section-recomendations__title o-font-subtitle">Recomendaciones</span>
+  <ng-template [ngIf]="getRecomendations().length > 0">
+    <span class="c-section-recomendations__title o-font-subtitle">Recomendaciones</span>
+  </ng-template>
+
 
   <div class="c-card-layout o-layout-wrap">
     <div *ngFor="let item of getRecomendations()" class="c-card" [ngClass]="getTypeLayout(item)">

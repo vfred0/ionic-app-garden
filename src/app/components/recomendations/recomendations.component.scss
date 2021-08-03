@@ -5,6 +5,10 @@
     flex-direction: column;
 
     &__title {
+      text-align: center;
+      // &__title {
+      // }
+
       color: var(--color-neutral---black400);
     }
   }
